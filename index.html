@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapCut Pro Access 2026 | Akses Terbatas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root { --primary: #00ffc8; --bg: #070b14; --card: #111827; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        body { 
+            background: var(--bg); 
+            background-image: radial-gradient(circle at top, #1e293b 0%, transparent 70%);
+            color: white; display: flex; justify-content: center; min-height: 100vh; padding: 20px; 
+        }
+
+        .container { width: 100%; max-width: 450px; margin-top: 20px; }
+        
+        /* Branding */
+        .header { text-align: center; margin-bottom: 25px; }
+        .logo-box { position: relative; display: inline-block; }
+        .logo { width: 90px; height: 90px; border-radius: 22px; margin-bottom: 10px; border: 2px solid var(--primary); box-shadow: 0 0 20px rgba(0,255,200,0.2); }
+        .badge-pro { position: absolute; bottom: 15px; right: -10px; background: #ff007a; color: white; padding: 2px 8px; border-radius: 6px; font-size: 0.6rem; font-weight: 800; }
+
+        /* Main Card */
+        .card { background: var(--card); border-radius: 28px; padding: 35px 25px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 25px 50px rgba(0,0,0,0.6); }
+        .limit-tag { background: rgba(239, 68, 68, 0.1); color: #f87171; padding: 12px; border-radius: 14px; font-size: 0.8rem; font-weight: 700; margin-bottom: 25px; text-align: center; border: 1px solid rgba(239,68,68,0.2); }
+
+        /* Input Section */
+        .section-label { font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 12px; text-align: center; }
+        input { width: 100%; padding: 18px; border-radius: 16px; border: 2px solid #334155; background: #070b14; color: white; text-align: center; font-size: 1.1rem; outline: none; transition: 0.3s; margin-bottom: 5px; }
+        input:focus { border-color: var(--primary); }
+        .hint { font-size: 0.75rem; color: #64748b; text-align: center; margin-bottom: 25px; }
+        .hint span { color: #ff007a; font-weight: 700; cursor: pointer; }
+
+        /* Share Area */
+        .share-area { border-top: 1px dashed #334155; padding-top: 25px; margin-top: 10px; }
+        .btn-fb-share { 
+            width: 100%; padding: 18px; border-radius: 16px; border: none; 
+            background: #1877F2; color: white; font-weight: 700; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            text-decoration: none; transition: 0.3s; margin-bottom: 15px;
+        }
+        .btn-fb-share:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(24,119,242,0.3); }
+
+        /* Unlock Button */
+        .btn-unlock { 
+            width: 100%; padding: 20px; border-radius: 18px; border: none; 
+            background: #1f2937; color: rgba(255,255,255,0.2); 
+            font-weight: 800; font-size: 1rem; cursor: not-allowed; transition: 0.4s; 
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .active { background: linear-gradient(135deg, #00ffc8, #6366f1) !important; color: #070b14 !important; cursor: pointer !important; box-shadow: 0 15px 30px rgba(0,255,200,0.3) !important; }
+
+        /* Result Section */
+        #result { display: none; text-align: center; animation: zoomIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        @keyframes zoomIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        .creds-box { background: #070b14; padding: 20px; border-radius: 18px; border: 2px solid var(--primary); margin: 15px 0; }
+        .creds-box p { font-size: 0.7rem; color: #94a3b8; margin-bottom: 5px; }
+        .creds-box h3 { font-family: monospace; font-size: 1.3rem; color: var(--primary); letter-spacing: 1px; }
+
+        .footer { text-align: center; margin-top: 30px; color: #4b5563; font-size: 0.7rem; line-height: 1.5; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo-box">
+                <img src="https://upload.wikimedia.org/wikipedia/id/3/36/CapCut_logo.png" class="logo">
+                <span class="badge-pro">PRO</span>
+            </div>
+            <h2 style="margin-top:10px;">CapCut Premium <span style="color:var(--primary)">2026</span></h2>
+        </div>
+
+        <div class="card">
+            <div id="unlock-form">
+                <div class="limit-tag">⚠️ SLOT TERBATAS: Hanya 3 Orang Tercepat!</div>
+                
+                <span class="section-label">Langkah 1: Masukkan Password</span>
+                <input type="password" id="inputPass" placeholder="••••••••">
+                <p class="hint">Password? Tanyakan <span>"MAU"</span> di komentar Facebook</p>
+
+                <div class="share-area">
+                    <span class="section-label">Langkah 2: Verifikasi Bagikan</span>
+                    <a href="javascript:void(0)" onclick="shareKeFacebook()" class="btn-fb-share">
+                        <i data-lucide="facebook"></i> BAGIKAN POSTINGAN FB
+                    </a>
+                </div>
+
+                <div id="status-share" style="text-align:center; font-size:0.7rem; color:#ef4444; margin-bottom:15px;">
+                    ✖ Belum dibagikan ke Facebook
+                </div>
+
+                <button class="btn-unlock" id="btnAction" onclick="prosesBuka()">BUKA AKSES SEKARANG</button>
+            </div>
+
+            <div id="result">
+                <i data-lucide="check-circle" size="40" style="color:var(--primary); margin-bottom:10px;"></i>
+                <h3 style="margin-bottom:20px;">AKSES DITERIMA!</h3>
+                <div class="creds-box">
+                    <p>EMAIL AKSES:</p>
+                    <h3>3dqa3nxf5h@zgq.inapa.biz.id</h3>
+                </div>
+                <div class="creds-box">
+                    <p>PASSWORD LOGIN:</p>
+                    <h3>masuk123</h3>
+                </div>
+                <p style="font-size:0.65rem; color:#f87171;">*Dilarang mengganti password atau akun akan di-banned.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 CapCut Share Community Indonesia.<br>
+            Pastikan akun Facebook Anda dalam mode Publik saat membagikan.
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        let sudahShare = false;
+        const PASS_BENAR = "PRO2026"; // Ganti password di sini
+        
+        // PENTING: GANTI LINK DI BAWAH INI DENGAN LINK POSTINGAN FACEBOOK ANDA!
+        const URL_POSTINGAN_FB = "https://web.facebook.com/share/p/1AKUYUA9pq/";
+
+        function shareKeFacebook() {
+            // Membuka jendela share Facebook
+            const urlShare = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(URL_POSTINGAN_FB);
+            window.open(urlShare, '_blank', 'width=600,height=400');
+
+            // Aktifkan tombol Buka Akses
+            sudahShare = true;
+            const btn = document.getElementById('btnAction');
+            const status = document.getElementById('status-share');
+            
+            btn.classList.add('active');
+            btn.innerHTML = "KONFIRMASI & BUKA";
+            
+            status.innerHTML = "✔ Berhasil dibagikan! Silakan buka akses.";
+            status.style.color = "#00ffc8";
+            lucide.createIcons();
+            
+            alert("Terima kasih! Sekarang masukkan password dan klik tombol Buka Akses.");
+        }
+
+        function prosesBuka() {
+            const input = document.getElementById('inputPass').value;
+            
+            if(!sudahShare) {
+                alert("Harap bagikan postingan ke Facebook terlebih dahulu!");
+                return;
+            }
+
+            if(input.toUpperCase() === PASS_BENAR) {
+                document.getElementById('unlock-form').style.display = 'none';
+                document.getElementById('result').style.display = 'block';
+                lucide.createIcons();
+            } else {
+                alert("Password Salah! Tanyakan password di komentar Facebook.");
+            }
+        }
+    </script>
+</body>
+</html>
